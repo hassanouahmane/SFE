@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="852.0" prefWidth="1169.0" stylesheets="@../CSS/general.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UsersTableController">
+   <content>
+      <ScrollPane prefHeight="850.0" prefWidth="1176.0" stylesheets="@../CSS/general.css">
+         <content>
+            <Pane prefHeight="852.0" prefWidth="1153.0">
+               <children>
+                  <Text layoutX="577.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Users" />
+                  <TableView id="table-view .column-header" fx:id="tableView" layoutX="87.0" layoutY="163.0" onMouseClicked="#menue" prefHeight="639.0" prefWidth="1022.0" styleClass="table-row-cell">
+                    <columns>
+                      <TableColumn fx:id="nomColomn" prefWidth="137.0" text="Nom" />
+                      <TableColumn fx:id="prenomColomn" prefWidth="125.0" text="Prenom" />
+                        <TableColumn fx:id="cinColomn" prefWidth="116.0" text="CIN" />
+                        <TableColumn fx:id="teleColomn" prefWidth="150.0" text="Tele" />
+                        <TableColumn fx:id="addresseColomn" prefWidth="169.0" text="Addresse" />
+                        <TableColumn fx:id="createdbyColomn" prefWidth="150.0" text="Cré par " />
+                        <TableColumn fx:id="rolrColomn" prefWidth="173.0" text="Role" />
+                    </columns>
+                  </TableView>
+                  <HBox layoutX="87.0" layoutY="95.0" prefHeight="62.0" prefWidth="163.0">
+                     <children>
+                        <Button fx:id="AdduserBtn" mnemonicParsing="false" onAction="#HandelAddUser" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #218c74; -fx-background-radius: 18;" stylesheets="@../CSS/general.css" text="Ajouter Utilisateur" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="470.0" layoutY="89.0" prefHeight="50.0" prefWidth="315.0">
+                     <children>
+                        <TextField fx:id="search" onKeyReleased="#SearchText" prefHeight="50.0" prefWidth="310.0" promptText="Chercher Par Nom" styleClass="textfield" stylesheets="@../CSS/general.css" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="650.0" layoutY="87.0" prefHeight="66.0" prefWidth="291.0" />
+                  <HBox layoutX="953.0" layoutY="92.0" prefHeight="44.0" prefWidth="87.0" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </content>
+</ScrollPane>

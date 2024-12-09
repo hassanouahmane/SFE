@@ -1,0 +1,39 @@
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="875.0" stylesheets="@../CSS/general.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController">
+   <children>
+      <VBox alignment="CENTER" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="373.0" style="-fx-background-color: #218c74;">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="373.0" style="-fx-background-color: #218c74;">
+               <children>
+                  <ImageView fitHeight="255.0" fitWidth="380.0">
+                     <image>
+                        <Image url="@../../../logo-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Pane fx:id="ButtonSignup" layoutX="361.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: 40E0D0;" stylesheets="@../login.css">
+         <children>
+            <BottomNavigation layoutX="112.0" layoutY="412.0" />
+            <Text fill="#05c46b" layoutX="163.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN IN TO CONTINUE " textAlignment="CENTER" />
+            <TextField fx:id="nom_input" layoutX="158.0" layoutY="187.0" promptText="nom" styleClass="textfield" />
+            <Text layoutX="125.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+            <Text layoutX="102.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Button fx:id="btnllogin" layoutX="196.0" layoutY="412.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="145.0" style="-fx-background-color: #218c74;" styleClass="btnLogin" stylesheets="@../CSS/login.css" text="Login" />
+            <PasswordField fx:id="password_input" layoutX="162.0" layoutY="275.0" promptText="password" styleClass="textfield" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

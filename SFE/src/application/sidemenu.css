@@ -1,0 +1,67 @@
+/* Style pour la barre latérale */
+#sidebar {
+    -fx-background-color: #218c74; /* Couleur de fond */
+    -fx-spacing: 10; /* Espacement entre les éléments */
+    -fx-padding: 20; /* Remplissage intérieur */
+}
+/* Style pour les boutons de la barre latérale */
+.sidemenu-btn {
+    -fx-background-color: #05c26a; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-family: "Ubuntu Regular"; /* Police de caractères */
+    -fx-font-size: 17px; /* Taille de la police */
+    -fx-padding: 10 20; /* Remplissage intérieur */
+    -fx-background-radius: 20; /* Rayon des coins */
+    -fx-border: none; /* Pas de bordure */
+    -fx-background-insets: 0; /* Pas de marge intérieure */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Ombre portée */
+    -fx-cursor: hand; /* Curseur de la souris en main */
+}
+
+/* Style pour le bouton utilisateur */
+.sidemenu-btn-user {
+    -fx-background-color: #05c26a; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-size: 16px; /* Taille de la police */
+    -fx-padding: 10 20; /* Remplissage intérieur */
+    -fx-background-radius: 20; /* Rayon des coins */
+    -fx-border: none; /* Pas de bordure */
+    -fx-background-insets: 0; /* Pas de marge intérieure */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Ombre portée */
+    -fx-cursor: hand; /* Curseur de la souris en main */
+}
+
+/* Style pour l'icône de déconnexion */
+.logout-btn-icon {
+    -fx-graphic: url("path/to/logout-icon.png"); /* Chemin vers l'icône de déconnexion */
+    -fx-background-color: transparent; /* Couleur de fond transparente */
+    -fx-background-radius: 50%; /* Rayon de la bordure pour un cercle */
+    -fx-padding: 10; /* Remplissage intérieur */
+    -fx-background-size: cover; /* Taille de l'icône */
+    -fx-background-position: center; /* Position de l'icône */
+}
+
+/* Style pour le bouton de déconnexion */
+#logout_btn {
+    -fx-background-color: transparent; /* Couleur de fond transparente */
+    -fx-padding: 0; /* Pas de remplissage intérieur */
+    -fx-graphic: url("path/to/logout-icon.png"); /* Chemin vers l'icône de déconnexion */
+    -fx-background-size: cover; /* Taille de l'icône */
+    -fx-background-position: center; /* Position de l'icône */
+    -fx-background-insets: 0; /* Pas de marge intérieure */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); /* Ombre portée */
+    -fx-cursor: hand; /* Curseur de la souris en main */
+}
+/* Style pour les boutons de la barre latérale */
+.sidemenu-btn:pressed {
+    -fx-background-color: #8ef5d9; /* Vert clair */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Effet d'ombre portée */
+}
+
+/* Style pour le bouton utilisateur */
+.sidemenu-btn-user:pressed {
+    -fx-background-color: #8ef5d9; /* Vert clair */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Effet d'ombre portée */
+}
+
+

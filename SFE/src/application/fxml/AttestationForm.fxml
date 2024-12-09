@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="920.0" prefWidth="941.0" stylesheets="@../CSS/general.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AttestationController">
+   <content>
+      <Pane prefHeight="1726.0" prefWidth="953.0" stylesheets="@../CSS/general.css">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="14.0" prefHeight="1722.0" prefWidth="899.0" spacing="20" stylesheets="@../CSS/general.css">
+                <children>
+                    <!-- Top Section: Description de l'intervention -->
+                    <GridPane hgap="10" prefHeight="582.0" prefWidth="899.0" vgap="10">
+                        <children>
+                            <Label fx:id="labelIntervention" text="N° intervention:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField fx:id="textFieldIntervention" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+                            <Label fx:id="labelLieuTravail" text="Lieu de travail:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <TextField fx:id="textFieldLieuTravail" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+                            <Label fx:id="labelDescription" text="Description de l'opération:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <TextArea fx:id="textAreaDescription" styleClass="content-box" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+                            <Label fx:id="labelChargeConsignation" text="Chargé de consignation:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                            <Label fx:id="labelChargeTravaux" text="Chargé de travaux: ITC" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                            <ComboBox fx:id="comboBoxChargeConsignation" prefHeight="25.0" prefWidth="169.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            <ComboBox fx:id="comboBoxChargeTravaux" prefHeight="25.0" prefWidth="170.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entreprise Exterieur :" GridPane.rowIndex="6" />
+                        <TextField fx:id="entrepriseexterieurnom" prefHeight="25.0" prefWidth="100.0" promptText="Nom " styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="entrepriseexterieurtele" prefHeight="16.0" prefWidth="442.0" promptText="Tele" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <ComboBox fx:id="typeconscombo" prefHeight="35.0" prefWidth="174.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type Consignation :" GridPane.rowIndex="10" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Attestation :" />
+                        <TextField fx:id="textfieladattestaion" styleClass="textfield" GridPane.columnIndex="1" />
+                        </children>
+                        <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        </rowConstraints>
+                    </GridPane>
+            
+                    <!-- Middle Section: Consignation des énergies -->
+                    <VBox spacing="10">
+                        <children>
+                            <HBox spacing="10" />
+            
+                            <GridPane hgap="10" vgap="10">
+                                <children>
+                                    <Label fx:id="labelSourcesEnergie" text="Sources d'énergie" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                    <Label fx:id="labelAppareils" text="Identification des appareils à consigner" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                    <Label fx:id="labelNumCadenas" text="N° cadenas" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                    <Label fx:id="labelNomExecutant" text="Nom de l'exécutant de la consignation" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                                    <Label fx:id="labelSignature" text="Signature" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                                    <TextField fx:id="textFieldElectriqueAppareil" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="textFieldElectriqueCadenas" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="textFieldElectriqueExecutant" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="textFieldElectriqueSignature" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                    <TextField fx:id="textFieldHydrauliqueAppareil" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="textFieldHydrauliqueCadenas" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="textFieldHydrauliqueExecutant" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <TextField fx:id="textFieldHydrauliqueSignature" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <TextField fx:id="textFieldPneumatiqueAppareil" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="textFieldPneumatiqueCadenas" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField fx:id="textFieldPneumatiqueExecutant" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <TextField fx:id="textFieldPneumatiqueSignature" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <TextField fx:id="textFieldAirChaudAppareil" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="textFieldAirChaudCadenas" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField fx:id="textFieldAirChaudExecutant" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                    <TextField fx:id="textFieldAirChaudSignature" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <TextField fx:id="textFieldMecaniqueAppareil" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="textFieldMecaniqueCadenas" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="textFieldMecaniqueExecutant" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <TextField fx:id="textFieldMecaniqueSignature" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                    <TextField fx:id="textFieldProduitsChimiquesAppareil" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="textFieldProduitsChimiquesCadenas" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField fx:id="textFieldProduitsChimiquesExecutant" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                    <TextField fx:id="textFieldProduitsChimiquesSignature" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                    <TextField fx:id="textFieldGazVapeurAppareil" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="textFieldGazVapeurCadenas" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField fx:id="textFieldGazVapeurExecutant" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                    <TextField fx:id="textFieldGazVapeurSignature" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                    <TextField fx:id="textFieldEnergiePotentielleAppareil" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="textFieldEnergiePotentielleCadenas" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <TextField fx:id="textFieldEnergiePotentielleExecutant" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                    <TextField fx:id="textFieldEnergiePotentielleSignature" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                    <TextField fx:id="textFieldArriveeMatiereAppareil" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField fx:id="textFieldArriveeMatiereCadenas" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <TextField fx:id="textFieldArriveeMatiereExecutant" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                    <TextField fx:id="textFieldArriveeMatiereSignature" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                              <ComboBox fx:id="typeenergiecombx" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="hydrolique" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="pneumatique" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="airchaud" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="mecanique" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="chimique" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="6" />
+                              <ComboBox fx:id="gaz" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="energipotentielle" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="8" />
+                              <ComboBox fx:id="typeenergiecomb" prefWidth="150.0" styleClass="textfield" GridPane.rowIndex="9" />
+                                </children>
+                                <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                </rowConstraints>
+                            </GridPane>
+            
+                            <HBox spacing="10">
+                                <children>
+                                    <Label fx:id="labelCommentaires" text="Commentaires:" />
+                                    <TextArea fx:id="textAreaCommentaires" styleClass="content-box" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+            
+                    <!-- Bottom Section: Validation -->
+                    <GridPane hgap="10" prefHeight="142.0" prefWidth="899.0" vgap="10">
+                        <children>
+            
+                            <Label fx:id="labelChargeConsignationValidation" text="Chargé de consignation" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <ComboBox fx:id="comboBoxChargeConsignationValidation" prefWidth="150.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <DatePicker fx:id="datePickerChargeConsignation" styleClass="textfield" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Button fx:id="buttonValiderConsignation" mnemonicParsing="false" styleClass="btnLogin" text="Valider" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            
+                            <Label fx:id="labelChargeTravauxValidation" text="Chargé de travaux" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <ComboBox fx:id="comboBoxChargeTravauxValidation" prefWidth="150.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <DatePicker fx:id="datePickerChargeTravaux" styleClass="textfield" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Button fx:id="buttonValiderTravaux" mnemonicParsing="false" styleClass="btnLogin" text="Valider" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        </children>
+                        <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                        </rowConstraints>
+                    </GridPane>
+                  <GridPane fx:id="gridPaneDeconsignation" hgap="10" vgap="10">
+                     <children>
+                        <Label fx:id="labelTestDeconsignation" text="Test de vérification de la déconsignation" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Label fx:id="labelChargeDeconsignation" text="Chargé de consignation" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="comboBoxChargeDeconsignation" prefWidth="150.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="datePickerChargeDeconsignation" styleClass="textfield" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="buttonValiderDeconsignation" mnemonicParsing="false" styleClass="btnLogin" text="Valider" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label fx:id="labelChargeTravauxDeconsignation" text="Chargé de travaux" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="comboBoxChargeTravauxDeconsignation" prefWidth="150.0" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="datePickerChargeTravauxDeconsignation" styleClass="textfield" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="buttonValiderTravauxDeconsignation" mnemonicParsing="false" styleClass="btnLogin" text="Valider" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Button fx:id="buttonEnregistrer" mnemonicParsing="false" onAction="#handleSave" styleClass="btnLogin" text="Enregistrer" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                  </GridPane>
+                </children>
+            </VBox>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>

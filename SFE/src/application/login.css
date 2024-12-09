@@ -1,0 +1,42 @@
+/* Style pour l'élément VBox */
+.VBox {
+    -fx-background-color: #218c74; /* Couleur de fond */
+}
+
+/* Style pour l'élément Pane */
+.Pane {
+    -fx-background-color: linear-gradient(to bottom, #40E0D0, #20B2AA); /* Dégradé de couleurs */
+}
+
+/* Style pour les boutons */
+.btnLogin {
+    -fx-background-color: #0be881; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-background-radius: 20; /* Rayon des coins */
+    -fx-padding: 10 20; /* Espacement intérieur */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-weight: bold; /* Gras */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Effet d'ombre portée */
+}
+
+/* Style pour le texte */
+.Text {
+    -fx-fill: #05c46b; /* Couleur du texte */
+    -fx-font-size: 18px; /* Taille de la police */
+    -fx-font-weight: bold; /* Gras */
+}
+
+/* Style pour les champs de texte */
+.textfield {
+    -fx-background-color: #f0f0f0; /* Couleur de fond */
+    -fx-border-color: #0be881; /* Couleur de la bordure */
+    -fx-border-radius: 4; /* Rayon de la bordure */
+    -fx-padding: 8 12; /* Espacement intérieur */
+    -fx-font-size: 14px; /* Taille de la police */
+}
+
+/* Style pour l'image */
+.ImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0); /* Effet d'ombre portée */
+}
+

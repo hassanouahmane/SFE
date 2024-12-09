@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane prefHeight="681.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
+   <children>
+      <GridPane hgap="10" layoutX="321.0" layoutY="171.0" stylesheets="@../CSS/general.css" vgap="10">
+          <padding>
+              <Insets bottom="20" left="20" right="20" top="20" />
+          </padding>
+      
+          <!-- Nom d'utilisateur -->
+          <Label styleClass="Text" text="Nom d'utilisateur:" GridPane.rowIndex="1" />
+          <TextField fx:id="username_txt" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+          <!-- Mot de passe actuel -->
+          <Label styleClass="Text" text="Mot de passe actuel:" GridPane.rowIndex="2" />
+          <PasswordField fx:id="current_password_txt" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      
+          <!-- Nouveau mot de passe -->
+          <Label styleClass="Text" text="Nouveau mot de passe:" GridPane.rowIndex="3" />
+          <PasswordField fx:id="new_password_txt" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      
+          <!-- Confirmer le nouveau mot de passe -->
+          <Label styleClass="Text" text="Confirmer le nouveau mot de passe:" GridPane.rowIndex="4" />
+          <PasswordField fx:id="confirm_password_txt" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      
+          <!-- Save Button -->
+          <Button fx:id="save" onAction="#handleSaveLoginInfo" style="-fx-background-color: #218c74; -fx-text-fill: white;" styleClass="btnLogin" text="Enregistrer" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   
+          <!-- Title -->
+       <Label layoutX="430.0" layoutY="90.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Modifier les Informations de Connexion" />
+   </children>
+</Pane>
